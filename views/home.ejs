@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.css">
+    <script src="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js"></script>
+    <link rel="stylesheet" href="../stylesheet/style.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Bem Vindo</a>
+        <form class="form-inline" action="/search" , method="get">
+            <input class="form-control mr-sm-2" type="text" name="query" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <a class="btn secondary white btn-lg" href="/eventos">Cadastrar Eventos</a>
+        <a class="btn secondary white btn-lg" href="/logout">Logout</a>
+    </nav>
+    <center>
+        <%
+            if(results){
+                if(list.length > 0){
+        %>
+        <b>Resultados da pesquisa por <%= search %>:</b>
+        <ul>
+            <% list.forEach(function(item){ %>
+            <li><%= item.nome %> <%= item.descricao %> (<%= item.data%>)</li>
+            <% }); %>
+        </ul>
+        <% } else{ %>
+        <b>Nenhum resultado encontrado para <%= search %>!</b>
+        <% 
+            }
+        }
+        %>
+
+    </center>
+
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height:100vh">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Fazer Login</h2>
+                        <form action="/auth/login" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Login"
+                                    autocomplete="off" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Senha"
+                                    autocomplete="off" />
+                            </div>
+                              <p>
+                            <a href="/cadastro">Ainda não possui cadastro? Clique aqui!!</a>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
