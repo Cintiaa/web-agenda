@@ -16,7 +16,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-
 </head>
 
 
@@ -30,6 +29,9 @@
         <a class="btn secondary white btn-lg" href="/eventos">Cadastrar Eventos</a>
         <a class="btn secondary white btn-lg" href="/logout">Logout</a>
     </nav>
+    <main>
+        <div id="instafeed" class="instafeed"></div>
+    </main>
     <center>
         <%
             if(results){
@@ -49,6 +51,25 @@
         %>
 
     </center>
+
+
+    <script type="text/javascript" src="path/to/instafeed.min.js"></script>
+    <script>
+        var feed = new Instafeed({
+            get: 'user',
+            userId: 17852738476857554,
+            accessToken: 'IGQVJYUUJQam5aVlItNXlDUWxPUXViR2UwVFkwTHpfUkJPNEwteXJ3dXdrTUxwcWJVc1VkVWVCNjZAHdFVaS2dGcjZADaE95ZAjR3VUNLQllRMUhkT1JDc0kzTFhLY3Jma2hHa1ZAzdE9BWC12TlFobzJNaFB2Vk9QSDNMcG5N',
+            //target: 'instafeed',
+            resolution: 'standard_resolution',
+            limit: 3,
+            template: '<div class="single-image"><a href="{{link}}"><img src="{{image}}" title="{{caption}}"/></a></div>',
+            /* after: function () {
+                if (!this.hasNext()) {
+                    loadButton.setAttribute('disabled', 'disabled');
+                }
+            }, */
+        });
+    </script>
 
 </body>
 
