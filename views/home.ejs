@@ -56,20 +56,12 @@
 
 
     <script type="text/javascript">
-        var feed = new Instafeed({
-            get: 'user',
-            userId: 17852738476857554,
-            accessToken: 'IGQVJYanJ6NHFHUEhzdE5ycC1sbHBSQnNhamlqUjR5TTZARMjg1b2VISGhiQ3hIWmgtOFZAMYTMyRTBuSUpuR19xWDIyNFBuRnoyX19DQmZA6QlRpNUluenMwdjRRR2xXcWNFdll4UUl1UUt2MGFJTWd6dAZDZD',
-            //target: 'instafeed',
-            resolution: 'standard_resolution',
-            limit: 3,
-            template: '<div class="single-image"><a href="{{link}}"><img src="{{image}}" title="{{caption}}"/></a></div>',
-            /* after: function () {
-                if (!this.hasNext()) {
-                    loadButton.setAttribute('disabled', 'disabled');
-                }
-            }, */
-        });
+        var token = 'IGQVJVcHNlRWthdTNSVHZAXMFFpQUpEdWxXVTdmRllNTWtMcnRPNHBQeVZArVUlxYTZANNEhCbHp5clR6YnVNLXoxV0ZAtUFFhNkhfODZAJR2tyU0NiSVFwVmp0bWJoZA2hqSW1CUnJabUp5WnlhbHVsUVlSSQZDZD';
+        fetch('https://graph.instagram.com/17841401019273486"?fields=id,media_type,media_url,username,timestamp&access_token=' + token)
+            .then((response) => { response.json() })
+            .then((response) => {
+                console.log(response);
+            })
     </script>
 
 </body>
