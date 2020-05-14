@@ -57,9 +57,9 @@
 
     <script type="text/javascript">
         var token = 'IGQVJVcHNlRWthdTNSVHZAXMFFpQUpEdWxXVTdmRllNTWtMcnRPNHBQeVZArVUlxYTZANNEhCbHp5clR6YnVNLXoxV0ZAtUFFhNkhfODZAJR2tyU0NiSVFwVmp0bWJoZA2hqSW1CUnJabUp5WnlhbHVsUVlSSQZDZD';
-        fetch('https://graph.instagram.com/me/media?fields=id,caption&access_token=' + token)
-            .then((response) => { response.json() })
-            .then((response) => {
+        fetch('https://graph.instagram.com/17852738476857554?fields=id,media_type,media_url,username,timestamp&access_token=' + token)
+            .then(function (response) { response.json() })
+            .then(function (response) {
                 console.log(response);
             });
     </script>
