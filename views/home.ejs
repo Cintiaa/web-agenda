@@ -54,17 +54,16 @@
 
     </center>
 
-
-    <script type="text/javascript">
-        
-        fetch('https://api.instagram.com/v1/self/media/recent?access_token=IGQVJVcHNlRWthdTNSVHZAXMFFpQUpEdWxXVTdmRllNTWtMcnRPNHBQeVZArVUlxYTZANNEhCbHp5clR6YnVNLXoxV0ZAtUFFhNkhfODZAJR2tyU0NiSVFwVmp0bWJoZA2hqSW1CUnJabUp5WnlhbHVsUVlSSQZDZD')
-            .then(function (response) { response.json() })
-            .then(function (response) {
-                console.log(response);
-            });
-    </script>
-
 </body>
 
+<script type="text/javascript">
+
+    //https://api.instagram.com/v1/self/media/recent?access_token
+    fetch('https://graph.instagram.com/17852738476857554?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJVcHNlRWthdTNSVHZAXMFFpQUpEdWxXVTdmRllNTWtMcnRPNHBQeVZArVUlxYTZANNEhCbHp5clR6YnVNLXoxV0ZAtUFFhNkhfODZAJR2tyU0NiSVFwVmp0bWJoZA2hqSW1CUnJabUp5WnlhbHVsUVlSSQZDZD')
+        .then(function (response) { response.json() })
+        .then(function (response) {
+            console.log(response);
+        });
+</script>
 
 </html>
